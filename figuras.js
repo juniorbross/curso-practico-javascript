@@ -17,9 +17,24 @@ console.groupEnd();
 
 // codigo del triangulo
 console.group("triangulos");
-   
+
+function altura1 (cateto,base1){ 
+    return Math.sqrt(Math.pow(cateto,2) - Math.pow(base1/2, 2))
+}
+
+function trianguloIsoceles(lado1,lado2,base){
+    if(lado1===lado2 && lado1 != base){
+         const altura = altura1(lado1,base);
+         return areaTriangulo(altura,base);
+        }
+      else{
+          console.log("sea serio")
+      }  
+
+    }
+
     function perimetroTriangulo(lado1, lado2, base){
-        return lado1 + lado2 + base;
+        return (lado1*1 )+ (lado2*1) + (base*1);
     }
    //console.log("el perimetro mide :" + perimetroTriangulo + "cm");
 
@@ -71,3 +86,17 @@ console.groupEnd();
      const area = areaCuadrado(value);
      alert(area);
 }
+
+function CalcularPerimetroTriangulo() {
+    const input1 = document.getElementById("InputLado1");
+    const input2 = document.getElementById("InputLado2");
+    const input3 = document.getElementById("InputBase");
+     const value1 = input1.value;
+     const value2 = input2.value;
+     const value3 = input3.value;
+
+     const perimetro = perimetroTriangulo(value1,value2,value3);
+     alert(perimetro);
+ }
+
+
