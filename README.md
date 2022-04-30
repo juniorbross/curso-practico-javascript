@@ -11,3 +11,13 @@ simulacro subiendo
 - segundo: implementar las formulas en Javascript
 - tercer paso : crear funciones
 - cuarto paso: integrar js con html
+
+...
+
+## taller #2 porcentajes y descuentos      
+
+- Primer paso: definir las formulas
+- segundo: implementar las formulas en Javascript
+- tercer paso : crear funciones
+- cuarto paso: integrar js con html
+
