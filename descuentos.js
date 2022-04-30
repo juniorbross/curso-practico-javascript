@@ -9,3 +9,17 @@ function calcularPrecioConDescuento(precio, descuento){
     return precioConDescuento;
 }
 
+//interaccion con el html
+
+function ClickDiscount(){
+    const inputPrice = document.getElementById("inputPrice");
+    const priceValue = inputPrice.value;
+
+    const inputDiscount = document.getElementById("inputDiscount");
+    const discountValue = inputDiscount.value;
+
+   const resultado = calcularPrecioConDescuento(priceValue, discountValue);
+   const resultp = document.getElementById("ResultP");
+
+   resultp.innerText ="el precio final es $" + resultado;
+}
