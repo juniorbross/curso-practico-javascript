@@ -28,7 +28,7 @@ function trianguloIsoceles(lado1,lado2,base){
          return areaTriangulo(altura,base);
         }
       else{
-          console.log("sea serio")
+          alert ("sea serio, un triangulo isoceles tiene dos lados iguales")
       }  
 
     }
@@ -57,7 +57,7 @@ function diametroCirculo(radio){
 const PI= Math.PI;
 
 // circunferencia
-  function perimetro(radio) {
+  function Circunferencia(radio) {
       const diametro = diametroCirculo(radio);
       return diametro * PI;
   }
@@ -76,7 +76,10 @@ console.groupEnd();
      const value = input.value;
 
      const perimetro = perimetroCuadrado(value);
-     alert(perimetro);
+     const resultado = document.getElementById("resultadoImpresoCuadrado");
+
+     resultado.innerText= "el perimetr del cuadrado es :"+" "+ perimetro;
+
  }
 
  function CalcularAreaCuadrado() {
@@ -84,7 +87,9 @@ console.groupEnd();
      const value = input.value;
 
      const area = areaCuadrado(value);
-     alert(area);
+     const resultado = document.getElementById("resultadoImpresoCuadrado");
+
+     resultado.innerText= "el area del cuadrado es :"+" "+ area;
 }
 
 function CalcularPerimetroTriangulo() {
@@ -96,7 +101,59 @@ function CalcularPerimetroTriangulo() {
      const value3 = input3.value;
 
      const perimetro = perimetroTriangulo(value1,value2,value3);
-     alert(perimetro);
+     const resultado = document.getElementById("resultadoImpresoTriangulo");
+
+     resultado.innerText = "el perimetro del triangulo es:"+" "+ perimetro;
+ }
+
+ function CalcularAreaTriangulo() {
+    const input1 = document.getElementById("InputLado1");
+    const input2 = document.getElementById("InputLado2");
+    const input3 = document.getElementById("InputBase");
+     const value1 = input1.value;
+     const value2 = input2.value;
+     const value3 = input3.value;
+
+     const area1 = trianguloIsoceles(value1,value2,value3);
+     const resultado = document.getElementById("resultadoImpresoTriangulo");
+
+     resultado.innerText = "el area del triangulo es:"+" "+ area1;
  }
 
 
+ function CalcularDiametroCirculo() {
+    const input = document.getElementById("InputRadio");
+    const value = input.value;
+
+    const diametro1 = diametroCirculo(value);
+    const resultado = document.getElementById("resultadoImpresoCirculo");
+
+    resultado.innerText = "el diametro del circulo es:"+" "+ diametro1;
+
+ };
+
+ function CalcularCircunferenciaCirculo() {
+    const input = document.getElementById("InputRadio");
+    const value = input.value;
+
+    const circunferencia1 = Circunferencia(value);
+    const resultado = document.getElementById("resultadoImpresoCirculo");
+
+    resultado.innerText = "el diametro del circulo es:"+" "+ circunferencia1;
+
+ };
+
+ function CalcularAreaCirculo() {
+    const input = document.getElementById("InputRadio");
+    const value = input.value;
+
+    const area1 = areaCirculo(value);
+    const resultado = document.getElementById("resultadoImpresoCirculo");
+
+    resultado.innerText = "la circunferencia del circulo es:"+" "+ area1;
+
+ };
+
+ 
+
+ 

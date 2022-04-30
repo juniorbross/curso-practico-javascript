@@ -14,10 +14,10 @@
     <p>este es el primer taller con js </p>
   </header>
 
-  <section>
+  <section class="cuadrado">
     <h2>calcula area y perimetro de un cuadrado</h2>
     <form>
-      <label>
+      <label for="InputCuadrado">
         escribe cuanto mide cada lado de tu cuadrado:
       </label>
         <input id="InputCuadrado" type="number"/>
@@ -27,25 +27,27 @@
         <button type="button" onclick="CalcularAreaCuadrado()">
           calcular area
         </button>
+
+        <p id="resultadoImpresoCuadrado"></p>
       
     </form>
   </section>
 
   <section class="triangulo">
-    <h2>calcula area y perimetro de un triangulo</h2>
+    <h2>calcula area y perimetro de un triangulo isoceles</h2>
     <form>
-      <label>
+      <label for="InputLado1">
         escribe cuanto mide el lado 1 de tu triangulo:
       </label>
       
         <input id="InputLado1" type="number"/>
        
-        <label>
+        <label for="InputLado2">
           escribe cuanto mide el lado 2 de tu triangulo:
         </label>
         <input id="InputLado2" type="number"/>
 
-        <label>
+        <label for="InputBase">
           escribe cuanto mide la base  de tu triangulo:
         </label>
         <input id="InputBase" type="number"/>
@@ -56,6 +58,8 @@
         <button type="button" onclick="CalcularAreaTriangulo()">
           calcular area
         </button>
+
+        <p id="resultadoImpresoTriangulo"></p>
       
     </form>
   </section>
@@ -63,20 +67,24 @@
   <section class="circulo">
     <h2>calcula diametro, circunferencia y area de un circulo</h2>
     <form>
-      <label>
+      <label for="InputRadio">
         escribe cuanto mide el radio de tu circulo:
       </label>
         
       <input id="InputRadio" type="number"/>
-        <button type="button" onclick="CalcularPerimetroCuadrado()">
+
+        <button type="button" onclick="CalcularDiametroCirculo()">
           calcular diametro
         </button>
-        <button type="button" onclick="CalcularAreaCuadrado()">
+        <button type="button" onclick="CalcularCircunferenciaCirculo()">
           calcular circunferencia
         </button>
-        <button type="button" onclick="CalcularAreaCuadrado()">
+        <button type="button" onclick="CalcularAreaCirculo()">
           calcular area
         </button>
+
+        <p id="resultadoImpresoCirculo"></p>
+        
     </form>
   </section>
 
